@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Weather application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<div id="logo">
+			<img src="images/logo.png" alt="weather logo">
+			</div>
+
+			<div id="headertext">
+			<p>Weather in Serbia</p>
+			</div>
+		</div> <!-- end of header -->
+		
+
+		<div id="weatherContainer">
+
+			<div id="wetherList">
+
+				<h2 id="weatherpar"> Temperature per day</h2>
+
+				<ul>
+  					<li><div class="blok" onclick="temp('mon')"><p id="montemp">Monday</p> <p id="temp1"></p> </div></li>
+  					<li><div class="blok" onclick="temp('tue')"><p id="tuetemp" >Tuesday </p> <p id="temp2"> </p></div></li>
+  					<li><div class="blok" onclick="temp('wed')"><p id="wentemp" >Wednesday </p><p id="temp3"></p> </div></li>
+  					<li><div class="blok" onclick="temp('thu')"><p id="thutemp" >Thursday </p> <p id="temp4"></p></div></li>
+  					<li><div class="blok" onclick="temp('fri')"><p id="fritemp" >Friday</p> <p id="temp5"></p></div></li>
+  					<li><div class="blok" onclick="temp('sat')"><p id="sattemp" >Saturday</p><p id="temp6"></p> </div></li>
+  					<li><div class="blok" onclick="temp('sun')"><p id="suntemp" >Sunday</p><p id="temp7"></p> </div></li>
+				</ul>
+			
+			</div> <!-- end of wetherList -->
+
+
+
+
+			<div id="weatherWidget" onloadstart="temp('mon')" >
+				<div id="info">
+					<h1 id="day"> </h1>
+					<h2>Temperature:<span id="temp"></span></h2>
+					<h2>Wind Speed: <span id="windSpeed"></span> km/h</h2>
+					<h2>Wind Direction <span id="windDirection"></span></h2> 
+				 <h2>Type: <span id="type"></span></h2>
+				</div> 
+				<div ><img id="icon" src="images/clouds.png" alt="weather icon"></div>
+			</div> <!-- end of weatherWidget -->
+
+		</div> <!-- end of weatherContainer -->
+
+		<div id="footer"> This is end</div>
+	</div> <!-- end of wrapper -->
+
+<script src="app.js"></script>
+</body>
+</html>
